@@ -1,4 +1,4 @@
-import { Segment, Header, Icon, Divider, Grid, Form, List } from 'semantic-ui-react';
+import { Segment, Header, Icon, Divider, Grid, Form, List, Embed } from 'semantic-ui-react';
 import { Menu, Button, Transition } from 'semantic-ui-react';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
@@ -194,7 +194,7 @@ class MyMenu extends Component {
             return (
               <div>
                 <Header as='h1'>All Tasks</Header>
-                <List size='huge'  style={{overflow: 'auto', maxHeight: 700 }}>
+                <List size='huge' style={{ overflow: 'auto', maxHeight: 700 }}>
                   {this.state.tasklist.map((todoElement) => {
                     return (
                       <Segment style={todoElement.completed === true ? done : todo} className="atask" onChange={this.handleCheckClick}>
@@ -212,7 +212,25 @@ class MyMenu extends Component {
           exact
           render={() => {
             return (
-              <p>Chilling...</p>
+              <div style={{ paddingTop: 20 }}>
+                <Segment inverted>
+                  <Header>Ever heard of the procrastinator monkey?</Header>
+                  <Embed
+                    id='arj7oStGLkU'
+                    placeholder='https://hygger.io/wp-content/uploads/2019/02/4.png'
+                    source='youtube'
+                  />
+                </Segment>
+                <Segment inverted>
+                  <Header>Netflix? Now we're talking!</Header>
+                  <Embed
+                    id='KchhsRpocYc'
+                    placeholder='https://hygger.io/wp-content/uploads/2019/02/4.png'
+                    source='youtube'
+                  />
+
+                </Segment>
+              </div>
             );
           }}
         />
@@ -223,7 +241,7 @@ class MyMenu extends Component {
             return (
               <div>
                 <Header as='h1'>Finished Tasks</Header>
-                <List size='huge' style={{overflow: 'auto', maxHeight: 700 }}>
+                <List size='huge' style={{ overflow: 'auto', maxHeight: 700 }}>
                   {this.state.tasklist.filter(task => (task.completed === true)).map((todoElement) => {
                     return (
                       <Segment style={{ backgroundColor: "lightgreen" }} className="atask" onChange={this.handleCheckClick}>
@@ -243,7 +261,7 @@ class MyMenu extends Component {
             return (
               <div>
                 <Header as='h1'>Tasks to do...</Header>
-                <List size='huge' style={{overflow: 'auto', maxHeight: 700 }}>
+                <List size='huge' style={{ overflow: 'auto', maxHeight: 700 }}>
                   {this.state.tasklist.filter(task => (task.completed === false)).map((todoElement) => {
                     return (
                       <Segment style={{ backgroundColor: "tomato" }} className="atask" onChange={this.handleCheckClick}>
