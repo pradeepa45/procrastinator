@@ -7,7 +7,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+  background: url('watercolor.png');
+  background-attachment: fixed;
+  background-repeat: repeat-x repeat-y;
+  padding: 15%;
+  /* width: max-content; */
+}
+
+#formhere{
+  padding: 20px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.finished{
+  background-color: lightgreen;
+}
+
+.todo{
+  background-color: tomato;
+}
+
+#to-top{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: white;
 }
