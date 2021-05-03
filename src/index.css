@@ -32,9 +32,6 @@ code {
   background-color: tomato;
 }
 
-#to-top{
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  color: white;
+#top{
+  width: 900px;
 }

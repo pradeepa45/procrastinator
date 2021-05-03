@@ -1,9 +1,9 @@
-import { Segment, Header, Icon, Divider, Grid, Form, List, Checkbox } from 'semantic-ui-react';
+import { Segment, Header, Icon, Divider, Grid, Form, List } from 'semantic-ui-react';
 import { Menu, Button, Transition } from 'semantic-ui-react';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 import axios from 'axios';
-import $ from 'jquery';
+// import $ from 'jquery';
 import ListItem from './ListItem'
 
 
@@ -49,7 +49,7 @@ class MyMenu extends Component {
         userId: tasklist.length + 1
       }]
     }, () => {
-      // console.log('from set state', this.state.tasklist);
+      console.log('from set state', this.state.tasklist);
       this.setState({ name: '' })
     })
   }
@@ -64,7 +64,7 @@ class MyMenu extends Component {
           apiFetched: true
         }
           // , () => {
-
+          //   console.log(this.state.tasklist);
           // }
         )
       })
@@ -75,12 +75,30 @@ class MyMenu extends Component {
       activeItem: name
     })
   }
-  componentDidUpdate() {
-    console.log("component updated");
-    var tasks = document.getElementsByClassName("atask");
-    console.log(tasks[0]);
+  // componentDidUpdate() {
+  //   console.log("component updated");
+  //   var tasks = document.getElementsByClassName("atask");
+  //   // console.log(tasks[0]);
+
+  // }
+
+  handleCheckClick = (event) => {
+    // console.log(event.target.id);
+    let newTasklist = this.state.tasklist.map(item => (
+      item.title === event.target.id ? { ...item, completed: !item.completed } : item
+    ));
+    this.setState({
+      tasklist: [...newTasklist]
+    }, () => {
+      console.log(this.state.tasklist)
+    });
+    // var currTask = this.state.tasklist.find(obj => {
+    //   return obj.title === event.target.id
+    // })
+    // console.log(currTask);
 
   }
+
   render() {
     const { activeItem } = this.state;
     const { name } = this.state
@@ -176,11 +194,11 @@ class MyMenu extends Component {
             return (
               <div>
                 <Header as='h1'>All Tasks</Header>
-                <List size='huge'>
+                <List size='huge'  style={{overflow: 'auto', maxHeight: 700 }}>
                   {this.state.tasklist.map((todoElement) => {
                     return (
-                      <Segment style={todoElement.completed === true ? done : todo} className="atask">
-                        <ListItem title={todoElement.title} completed={todoElement.completed}/>
+                      <Segment style={todoElement.completed === true ? done : todo} className="atask" onChange={this.handleCheckClick}>
+                        <ListItem key={todoElement.title} title={todoElement.title} completed={todoElement.completed} />
                       </Segment>
                     )
                   })}
@@ -205,11 +223,11 @@ class MyMenu extends Component {
             return (
               <div>
                 <Header as='h1'>Finished Tasks</Header>
-                <List size='huge'>
+                <List size='huge' style={{overflow: 'auto', maxHeight: 700 }}>
                   {this.state.tasklist.filter(task => (task.completed === true)).map((todoElement) => {
                     return (
-                      <Segment style={{ backgroundColor: "lightgreen" }} className="atask">
-                        <ListItem title={todoElement.title} completed={todoElement.completed}/>
+                      <Segment style={{ backgroundColor: "lightgreen" }} className="atask" onChange={this.handleCheckClick}>
+                        <ListItem key={todoElement.title} title={todoElement.title} completed={todoElement.completed} />
                       </Segment>
                     )
                   })}
@@ -225,16 +243,17 @@ class MyMenu extends Component {
             return (
               <div>
                 <Header as='h1'>Tasks to do...</Header>
-                <List size='huge'>
+                <List size='huge' style={{overflow: 'auto', maxHeight: 700 }}>
                   {this.state.tasklist.filter(task => (task.completed === false)).map((todoElement) => {
                     return (
-                      <Segment style={{ backgroundColor: "tomato" }} className="atask">
-                        <ListItem title={todoElement.title} completed={todoElement.completed}/>
+                      <Segment style={{ backgroundColor: "tomato" }} className="atask" onChange={this.handleCheckClick}>
+                        <ListItem key={todoElement.title} title={todoElement.title} completed={todoElement.completed} />
                       </Segment>
                     )
                   })}
                 </List>
               </div>
+
             );
           }}
         />
@@ -260,9 +279,9 @@ class MyHead extends Component {
             </Header.Content>
           </Header>
           <Divider />
-          <MyMenu />
-        </Segment>
 
+        </Segment>
+        <MyMenu />
       </div>
     );
   }
@@ -275,9 +294,6 @@ class App extends Component {
     return (
       <div>
         <MyHead />
-        <button className="circular ui icon teal button" id="to-top">
-          <a href="#top"><i className="angle up icon"></i></a>
-        </button>
       </div>
     );
   }
