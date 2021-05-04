@@ -48,10 +48,12 @@ class MyMenu extends Component {
         completed: completed,
         userId: tasklist.length + 1
       }]
-    }, () => {
-      console.log('from set state', this.state.tasklist);
-      this.setState({ name: '' })
-    })
+    }
+    // , () => {
+    //   console.log('from set state', this.state.tasklist);
+    //   this.setState({ name: '' })
+    // }
+    )
   }
   FetchNow = () => {
     const url = 'https://jsonplaceholder.typicode.com/todos'
@@ -89,9 +91,11 @@ class MyMenu extends Component {
     ));
     this.setState({
       tasklist: [...newTasklist]
-    }, () => {
-      console.log(this.state.tasklist)
-    });
+    }
+    // , () => {
+    //   console.log(this.state.tasklist)
+    // }
+    );
     // var currTask = this.state.tasklist.find(obj => {
     //   return obj.title === event.target.id
     // })

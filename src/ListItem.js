@@ -7,6 +7,8 @@ function ListItem(props) {
             <h2>
                 <Checkbox id={props.title} defaultChecked={props.completed} />
                 {" " + props.title}
+                
+                    
             </h2>
         </List.Item>
     )
