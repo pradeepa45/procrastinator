@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/procrastinator/static/css/main.6caaaa60.chunk.css",
+    "main.js": "/procrastinator/static/js/main.0fb09a90.chunk.js",
+    "main.js.map": "/procrastinator/static/js/main.0fb09a90.chunk.js.map",
+    "runtime-main.js": "/procrastinator/static/js/runtime-main.03f76597.js",
+    "runtime-main.js.map": "/procrastinator/static/js/runtime-main.03f76597.js.map",
+    "static/css/2.73a8130e.chunk.css": "/procrastinator/static/css/2.73a8130e.chunk.css",
+    "static/js/2.01e0ac44.chunk.js": "/procrastinator/static/js/2.01e0ac44.chunk.js",
+    "static/js/2.01e0ac44.chunk.js.map": "/procrastinator/static/js/2.01e0ac44.chunk.js.map",
+    "static/js/3.745fc96f.chunk.js": "/procrastinator/static/js/3.745fc96f.chunk.js",
+    "static/js/3.745fc96f.chunk.js.map": "/procrastinator/static/js/3.745fc96f.chunk.js.map",
+    "index.html": "/procrastinator/index.html",
+    "static/css/2.73a8130e.chunk.css.map": "/procrastinator/static/css/2.73a8130e.chunk.css.map",
+    "static/css/main.6caaaa60.chunk.css.map": "/procrastinator/static/css/main.6caaaa60.chunk.css.map",
+    "static/js/2.01e0ac44.chunk.js.LICENSE.txt": "/procrastinator/static/js/2.01e0ac44.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/procrastinator/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/index.css": "/procrastinator/static/media/watercolor.36f8acab.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03f76597.js",
+    "static/css/2.73a8130e.chunk.css",
+    "static/js/2.01e0ac44.chunk.js",
+    "static/css/main.6caaaa60.chunk.css",
+    "static/js/main.0fb09a90.chunk.js"
+  ]
+}
