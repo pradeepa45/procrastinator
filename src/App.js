@@ -116,7 +116,7 @@ class MyMenu extends Component {
 		return (
 			//router for ment
 			<Router>
-				<Menu color='teal' inverted size='huge'>
+				<Menu stackable color='teal' inverted size='huge'>
 					<Menu.Item
 						as={NavLink} to='/all'
 						name='all'
