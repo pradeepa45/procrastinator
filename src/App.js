@@ -209,7 +209,7 @@ class MyMenu extends Component {
 						return (
 							<div>
 								<Header as='h1'>All Tasks</Header>
-								<List size='huge' style={{ overflow: 'auto', maxHeight: 700 }}>
+								<List size='huge' style={{ overflowY: 'scroll', maxHeight: 500}}>
 									{this.state.tasklist.map((todoElement) => {
 										return (
 											<Segment key={todoElement.title} style={todoElement.completed === true ? done : todo} onChange={this.handleCheckClick}>
@@ -257,7 +257,7 @@ class MyMenu extends Component {
 						return (
 							<div>
 								<Header as='h1'>Finished Tasks</Header>
-								<List size='huge' style={{ overflow: 'auto', maxHeight: 700 }}>
+								<List size='huge' style={{ overflowY: 'scroll', maxHeight: 500}}>
 									{this.state.tasklist.filter(task => (task.completed === true)).map((todoElement) => {
 										return (
 											<Segment key={todoElement.title} style={{ backgroundColor: "lightgreen" }}  onChange={this.handleCheckClick}>
@@ -277,7 +277,7 @@ class MyMenu extends Component {
 						return (
 							<div>
 								<Header as='h1'>Tasks to do...</Header>
-								<List size='huge' style={{ overflow: 'auto', maxHeight: 700 }}>
+								<List size='huge' style={{ overflowY: 'scroll', maxHeight: 500}}>
 									{this.state.tasklist.filter(task => (task.completed === false)).map((todoElement) => {
 										return (
 											<Segment key={todoElement.title} style={{ backgroundColor: "tomato" }} className="atask" onChange={this.handleCheckClick}>
