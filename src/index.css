@@ -10,8 +10,10 @@ body {
 #root{
   background: url('watercolor.png');
   background-attachment: fixed;
+  height: 100vh;
   background-repeat: repeat-x repeat-y;
-  padding: 15%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   /* width: max-content; */
 }
 
@@ -33,5 +35,5 @@ code {
 }
 
 #top{
-  width: 900px;
+  width: 1200px;
 }

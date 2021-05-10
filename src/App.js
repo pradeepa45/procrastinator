@@ -301,7 +301,7 @@ class MyMenu extends Component {
 class MyHead extends Component {
 	render() {
 		return (
-			<div className='ui very raised padded text three column container segment' id="top">
+			<div className='ui very raised padded text container segment' id="top">
 				<Segment>
 					<Header as='h1' size='huge'>
 						<Icon bordered inverted circular color='teal' name='hand peace outline' />
