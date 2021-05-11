@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/procrastinator/static/css/main.6caaaa60.chunk.css",
-    "main.js": "/procrastinator/static/js/main.e712fc0e.chunk.js",
-    "main.js.map": "/procrastinator/static/js/main.e712fc0e.chunk.js.map",
+    "main.css": "/procrastinator/static/css/main.a9127da3.chunk.css",
+    "main.js": "/procrastinator/static/js/main.a4149f64.chunk.js",
+    "main.js.map": "/procrastinator/static/js/main.a4149f64.chunk.js.map",
     "runtime-main.js": "/procrastinator/static/js/runtime-main.03f76597.js",
     "runtime-main.js.map": "/procrastinator/static/js/runtime-main.03f76597.js.map",
     "static/css/2.73a8130e.chunk.css": "/procrastinator/static/css/2.73a8130e.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.745fc96f.chunk.js.map": "/procrastinator/static/js/3.745fc96f.chunk.js.map",
     "index.html": "/procrastinator/index.html",
     "static/css/2.73a8130e.chunk.css.map": "/procrastinator/static/css/2.73a8130e.chunk.css.map",
-    "static/css/main.6caaaa60.chunk.css.map": "/procrastinator/static/css/main.6caaaa60.chunk.css.map",
+    "static/css/main.a9127da3.chunk.css.map": "/procrastinator/static/css/main.a9127da3.chunk.css.map",
     "static/js/2.01e0ac44.chunk.js.LICENSE.txt": "/procrastinator/static/js/2.01e0ac44.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/procrastinator/static/media/outline-icons.ddae9b1b.woff",
     "static/media/index.css": "/procrastinator/static/media/watercolor.36f8acab.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.03f76597.js",
     "static/css/2.73a8130e.chunk.css",
     "static/js/2.01e0ac44.chunk.js",
-    "static/css/main.6caaaa60.chunk.css",
-    "static/js/main.e712fc0e.chunk.js"
+    "static/css/main.a9127da3.chunk.css",
+    "static/js/main.a4149f64.chunk.js"
   ]
 }
