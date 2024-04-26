@@ -54,6 +54,7 @@ export default function LoginButton() {
       firstName,
       lastName,
       password
+      // TODO: hash password
     })
     if(success) {
       // TODO: setup session

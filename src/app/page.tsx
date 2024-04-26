@@ -30,7 +30,7 @@ export default function Home() {
           <Button onClick={handleClick} className="!bg-yellow-400">{showViewTasks ? "Hide" : "Show"} all tasks</Button>
         </div>
         <div className="px-5">
-        <AddTask handleClick={handleClick} />
+        <AddTask />
         </div>
       </div>
       {showViewTasks && (
