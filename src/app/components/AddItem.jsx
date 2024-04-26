@@ -13,7 +13,7 @@ const priorities = [
 
 const initialState = {
   name: '',
-  priority: 'Normal',
+  priority: '',
 }
 
 export default function AddTask() {
