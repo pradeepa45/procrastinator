@@ -11,5 +11,6 @@ export async function POST(req: NextRequest) {
     }
   })
   if (!user) return NextResponse.json({ isUsernameAvailable: true, success: true, message: 'Username is available' })
-  else  return NextResponse.json({ isUsernameAvailable: false, success: false, message: `Username ${username} is not available, please choose a different one` })
+  else return NextResponse.json({ isUsernameAvailable: false, success: false, message: `Username ${username} is not available, please choose a different one` },)
+  // TODO: dont miss cases where db didnt respond
 }

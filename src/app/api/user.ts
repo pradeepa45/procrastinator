@@ -1,3 +1,5 @@
+'use server'
+
 interface FormData {
   firstName: string,
   lastName: string, 

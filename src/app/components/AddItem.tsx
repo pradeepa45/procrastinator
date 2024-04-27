@@ -1,7 +1,9 @@
 'use client'
 
 import React from "react"
-import { Button, Dropdown, Form, Input } from "semantic-ui-react"
+import { Button, Form } from "semantic-ui-react"
+import TextInput from './Form/Input'
+import Select from './Form/Dropdown'
 
 
 const priorities = [
@@ -40,8 +42,8 @@ export default function AddTask() {
     <div className=" flex flex-col justify-center py-10">
       <p className="text-2xl mb-5 text-center">Add task</p>
       <Form onSubmit={addTask} className="flex flex-col gap-4 fluid">
-        <Input placeholder="New task" onChange={onChange} name="name" value={task.name} loading={submitting} required/>
-        <Dropdown
+        <TextInput placeholder="New task" onChange={onChange} name="name" value={task.name} loading={submitting} required/>
+        <Select
           placeholder='Priority (normal)'
           fluid
           search

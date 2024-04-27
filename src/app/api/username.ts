@@ -1,11 +1,13 @@
+'use server'
+
 type T = {
   message: string,
   success: boolean,
   isUsernameAvailable: boolean
 }
 
-export default async function checkUsernameAvailability(username:string): Promise<T> {
-  const rs = await fetch(`/is-username-available`, {
+export default async function checkUser(username:string): Promise<T> {
+  const rs = await fetch('/user-verify', {
     method: "POST",
     body: JSON.stringify({username})
   })
