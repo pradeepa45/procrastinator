@@ -1,5 +1,3 @@
-import React from "react"
-
 import SignUpButton from './components/SignUp'
 import LogInButton from './components/LogIn'
 
