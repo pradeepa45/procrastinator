@@ -1,6 +1,6 @@
 import React from "react"
 
-import SignUpButton from "./components/SignUp"
+import SignUpButton from './components/SignUp'
 import LogInButton from './components/LogIn'
 
 export default function Home() {
